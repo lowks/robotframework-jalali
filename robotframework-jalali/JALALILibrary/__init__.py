@@ -3,7 +3,7 @@ import jdatetime
 
 __author__ = 'esnaashari'
 
-class JALALIDate():
+class JALALILibrary():
     """
 
     """
