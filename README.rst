@@ -1,58 +1,39 @@
-robotframework-httpd
+robotframework-jalali
 ====================
 
-Robot Framework keyword library for HTTPD Simulator.
-
-This module allows easy to create http server and test request that http server is received
+This module allows easy to create JALALI Date in any format you want.
 
 
 
 Installation
 ------------
 
-``pip install robotframework-httpd``
+``pip install robotframework-jalali``
 
 Usage
 -----
-`HTTPDLibrary keyword
-documentation <http://mbbn.github.io/robotframework-httpd//>`__
+`jalaliLibrary keyword
+documentation <http://samira-esnaashari.github.io/robotframework-jalali/>`__
 
 .. code:: robotframework
 
     *** Settings ***
-    Library     HTTPDLibrary    port=5060
-    Library     RequestsLibrary
-    Library     Collections
+    Library     jalaliLibrary
 
     *** Test Cases ***
-    Test HttpdLibrary GET
-        Get Request  /test?param1=p1
-        Run Httpd
+    Get Today jalaliDate
+        ${Date}=   today date
+        log     ${Date}     console=True
 
-        Create Session  Httpd   http://localhost:5060
-        ${resp}=    Get    Httpd    /test?param1=p1
 
-        wait to get request
+    Get Today jalaliDate with special format
+        ${Date}=   today date   %y.%m.%d
+        log     ${Date}     console=True
 
-    Test HttpdLibrary Post
-        Post Request  this is body
-        Run Httpd
 
-        Create Session  Httpd   http://localhost:5060
-        ${resp}=    Post    Httpd    /      data=this is body
-
-        wait to get request
 
     *** Keywords ***
-    Get Request
-        [Arguments]  ${path}
-        ${request}=     create dictionary   method  GET     path    ${path}
-        set wished request  ${request}
 
-    Post Request
-        [Arguments]  ${post_body}
-        ${request}=     create dictionary   method  POST     post_body    ${post_body}
-        set wished request  ${request}
 
 Contribute
 ----------

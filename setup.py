@@ -21,7 +21,7 @@ setup(
     name='robotframework-jalali',
     package_dir={'': 'robotframework-jalali'},
     packages=['jalaliLibrary'],  # this must be the same as the name above
-    version='0.1.0',
+    version='0.1.1',
     description=short_description,
     author='samira esnaashari',
     author_email='samir.esnaashari@gmail.com',

@@ -3,12 +3,12 @@ import jdatetime
 
 __author__ = 'esnaashari'
 
-class JALALILibrary():
+class jalaliLibrary():
     """
 
     """
     ROBOT_LIBRARY_SCOPE = 'TEST SUITE'
-    # __version__ = pkg_resources.get_distribution("robotframework-jalalidate").version
+    __version__ = pkg_resources.get_distribution("robotframework-jalalidate").version
 
     def __init__(self):
         pass
