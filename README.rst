@@ -1,7 +1,7 @@
 robotframework-jalali
 ====================
 
-This module allows easy to create JALALI Date in any format you want.
+This module allows easy creation of JALALI dates in any format you want.
 
 
 
